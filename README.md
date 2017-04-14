@@ -29,7 +29,7 @@ Currently, all implementations need to be done manually on a per class basis.
                             // You can either use $extraFields to add extra columns
                             + array_combine( $extraFields, $extraFields )
                             // Or you can set your own labels, for instance when $this belongs to the other object
-                            + array( 'Value', $this->Title )
+                            + array( 'Value' => $this->Title )
                     );
             }
         }
