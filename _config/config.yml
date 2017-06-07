@@ -1,0 +1,4 @@
+# Automatically replace GridFieldConfig_RelationEditor classes.
+Injector:
+  GridFieldConfig_RelationEditor:
+    class: GridFieldConfig_RelationEditorExtra
