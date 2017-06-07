@@ -2,10 +2,9 @@
 Easily manage many_many_extraFields when adding objects to a ManyManyList via a GridField.
 
 ## TODO:
-Create matching GridField_FormAction, GridFieldDataColumns, GridFieldConfig,
-and/or GridFieldDetailForm to modify extra fields when objects have already
-been linked to the Foreign Key, as well as an injector to use the new classes
-by default.
+Create matching GridField_FormAction, GridFieldDataColumns, and/or GridFieldConfig,
+to modify extra fields when objects have already been linked to the Foreign Key, as
+well as an injector to use the new classes by default.
 
 ## Usage:
 Currently, all implementations need to be done manually on a per class basis.
@@ -31,6 +30,9 @@ Currently, all implementations need to be done manually on a per class basis.
                             // Or you can set your own labels, for instance when $this belongs to the other object
                             + array( 'Value' => $this->Title )
                     );
+                // Update Item Detail Form to display Extra Fields for Many Many relationships (optional or in contrast/addition to using other classes)
+                $config->getComponentByType( 'GridFieldDetailForm' )
+                    ->setItemRequestClass( 'GridFieldDetailFormExtra_ItemRequest' );
             }
         }
         
